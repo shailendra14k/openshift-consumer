@@ -5,7 +5,7 @@
     <camelContext id="_camelContext1" xmlns="http://camel.apache.org/schema/spring">
         <propertyPlaceholder id="properties" location="ref:props"/>
         <route id="timer">
-            <from id="to1" uri="amq722:queue:shailendra?concurrentConsumers=10"/>
+            <from id="to1" uri="amq722:queue:shailendra?concurrentConsumers=11"/>
             <log id="_log2" message="Message Received ${body}"/>
         </route>
     </camelContext>
@@ -15,7 +15,7 @@
     </bean>
     <bean class="org.apache.activemq.pool.PooledConnectionFactory"
         destroy-method="stop" id="amq722PooledConnectionFactory" init-method="start" primary="true">
-        <property name="maxConnections" value="11"/>
+        <property name="maxConnections" value="12"/>
         <property name="connectionFactory" ref="amq722ConnectionFactory"/>
     </bean>
     <bean class="org.apache.activemq.ActiveMQConnectionFactory" id="amq722ConnectionFactory">
