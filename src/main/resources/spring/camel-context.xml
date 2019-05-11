@@ -17,6 +17,7 @@
         destroy-method="stop" id="amq722PooledConnectionFactory" init-method="start" primary="true">
         <property name="maxConnections" value="12"/>
         <property name="connectionFactory" ref="amq722ConnectionFactory"/>
+         <property name="idleTimeout" value="60000"/>
     </bean>
     <bean class="org.apache.activemq.ActiveMQConnectionFactory" id="amq722ConnectionFactory">
         <property name="brokerURL" value="${brokerURL}"/>
