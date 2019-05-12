@@ -5,7 +5,7 @@
     <camelContext id="_camelContext1" xmlns="http://camel.apache.org/schema/spring">
         <propertyPlaceholder id="properties" location="ref:props"/>
         <route id="timer">
-            <from id="to1" uri="amq722:queue:shailendra?concurrentConsumers=15"/>
+            <from id="to1" uri="amq722:queue:shailendra?concurrentConsumers=11"/>
             <log id="_log2" message="Message Received ${body}"/>
         </route>
     </camelContext>
